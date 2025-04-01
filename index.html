@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>لعبة XO</title>
+    <title>لعبة XO ضد سوتر</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
-        <div class="header">
-            <input type="text" id="playerName" placeholder="ادخل اسمك">
-            <button onclick="startGame()">ابدأ اللعب</button>
+
+    <div class="container">
+        <h1>لعبة XO ضد سوتر</h1>
+        
+        <!-- إدخال اسم اللاعب -->
+        <div id="player-name-container">
+            <label for="player-name">ما اسمك؟</label>
+            <input type="text" id="player-name" placeholder="أدخل اسمك" />
+            <button onclick="startGame()">ابدأ اللعبة</button>
         </div>
 
-        <div id="score">
-            <div id="playerScoreDisplay">
-                <span id="playerNameDisplay">اللاعب: </span>
-                <span id="playerScore">0</span>
-            </div>
-            <div id="computerScoreDisplay">
-                <span id="computerNameDisplay">سوتر: </span>
-                <span id="computerScore">0</span>
-            </div>
+        <!-- لوحة اللعب -->
+        <div class="board" id="board"></div>
+
+        <!-- مكان عرض النتيجة -->
+        <div id="result-container"></div>
+
+        <!-- مكان احتساب النتيجة -->
+        <div id="scoreboard">
+            <h3>النتيجة</h3>
+            <p><span id="player-name-display"></span>: <span id="player-score">0</span></p>
+            <p>سوتر: <span id="ai-score">0</span></p>
         </div>
 
-        <div id="board"></div>
-        <div id="result"></div>
+        <!-- زر إعادة اللعب -->
+        <button id="reset-button" style="display: none;" onclick="resetGame()">إعادة اللعب</button>
     </div>
 
     <script src="script.js"></script>
