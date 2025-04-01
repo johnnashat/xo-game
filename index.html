@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لعبة XO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div class="header">
+            <input type="text" id="playerName" placeholder="ادخل اسمك">
+            <button onclick="startGame()">ابدأ اللعب</button>
+        </div>
+
+        <div id="score">
+            <div id="playerScoreDisplay">
+                <span id="playerNameDisplay">اللاعب: </span>
+                <span id="playerScore">0</span>
+            </div>
+            <div id="computerScoreDisplay">
+                <span id="computerNameDisplay">سوتر: </span>
+                <span id="computerScore">0</span>
+            </div>
+        </div>
+
+        <div id="board"></div>
+        <div id="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
